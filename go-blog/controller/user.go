@@ -59,7 +59,7 @@ func (c *userController) Register(ctx *gin.Context) {
 
 func (c *userController) Login(ctx *gin.Context) {
 	var userDTO dto.UserLoginRequest
-
+	
 	errDTO := ctx.ShouldBind(&userDTO)
 	if errDTO != nil {
 		response := utils.BuildErrorResponse("Gagal memproses request", http.StatusBadRequest)
@@ -95,7 +95,7 @@ func (c *userController) Upload(ctx *gin.Context) {
 	tokenService := service.NewJWTService()
 
 	id, _ := tokenService.GetUserIDByToken(token) // id sudah pasti ada jika berhasil melewati validate, jadi tidak mungkin error
-
+	
 	var blogDTO dto.BlogCreateRequest
 	errDTO := ctx.ShouldBind(&blogDTO)
 	if errDTO != nil {
@@ -160,7 +160,7 @@ func (c *userController) Update(ctx *gin.Context) {
 	tokenService := service.NewJWTService()
 
 	id, _ := tokenService.GetUserIDByToken(token)
-
+	# tes deploy
 	var name dto.UserChangeNameRequest
 	err := ctx.ShouldBind(&name)
 	if err != nil {
