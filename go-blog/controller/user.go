@@ -160,7 +160,7 @@ func (c *userController) Update(ctx *gin.Context) {
 	tokenService := service.NewJWTService()
 
 	id, _ := tokenService.GetUserIDByToken(token)
-	# tes deploy
+	
 	var name dto.UserChangeNameRequest
 	err := ctx.ShouldBind(&name)
 	if err != nil {
