@@ -2,7 +2,7 @@ package controller
 
 import (
 	"net/http"
-	"oprec/Clean-Arch/entity"
+	"oprec/go-blog/entity"
 	"oprec/go-blog/dto"
 	"oprec/go-blog/service"
 	"oprec/go-blog/utils"
