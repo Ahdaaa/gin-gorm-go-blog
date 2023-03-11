@@ -27,7 +27,7 @@ func UserRoutes(router *gin.Engine, userController controller.UserController) {
 		userRoutes.PUT("/update/name", userController.Update)
 		userRoutes.POST("/comment/:id", userController.Comment)
 		userRoutes.POST("/like/blog/:id", userController.Like)
-		userRoutes.POST("/delete", userController.Delete)
+		userRoutes.DELETE("/delete", userController.Delete)
 	}
 
 }
