@@ -161,7 +161,7 @@ func (c *userController) Update(ctx *gin.Context) {
 
 	id, _ := tokenService.GetUserIDByToken(token)
 
-	var name entity.User
+	var name dto.UserChangeNameRequest
 	err := ctx.ShouldBind(&name)
 	if err != nil {
 		response := utils.BuildErrorResponse("Gagal memproses request", http.StatusBadRequest)
